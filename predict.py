@@ -19,7 +19,6 @@ test_image_generator = test_datagen.flow_from_directory(
 
 df = pd.DataFrame(columns=['ImageId', 'EncodedPixels'])
 
-k=0
 
 for filename in os.listdir('data/test_v2/data/'):
     with Image.open('data/test_v2/data/' + filename) as im:
