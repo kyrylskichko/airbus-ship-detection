@@ -48,7 +48,7 @@ test_mask_generator = mask_datagen.flow_from_directory(
 train_generator = zip(train_image_generator, train_mask_generator)
 test_generator = zip(test_image_generator, test_mask_generator)
 
-es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=2)
+es = ModelCheckpoint("last_model", monitor='val_loss', verbose=0, save_best_only=False, save_weights_only=False, mode='auto', period=1)
 
 model.fit(
     train_generator,

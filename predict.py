@@ -1,4 +1,3 @@
-from model import model
 import os
 from config import IMG_SIZE
 from keras.preprocessing.image import ImageDataGenerator
@@ -6,8 +5,9 @@ import numpy as np
 from PIL import Image
 from utils import mask_to_rle
 import pandas as pd
+from keras import models as models
 
-model.load_weights("model_save.hdf5")
+model = models.load_model('last_model')
 
 test_datagen = ImageDataGenerator()
 
