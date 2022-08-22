@@ -2,7 +2,7 @@ import tensorflow as tf
 from keras.preprocessing.image import ImageDataGenerator
 from keras.callbacks import EarlyStopping
 import keras.losses as losses
-from config import batch_size, IMG_SIZE
+from config import batch_size, IMG_SIZE, epochs, steps_per_epoch
 from model import model
 
 optimizer = tf.keras.optimizers.SGD(learning_rate=0.01)
@@ -52,8 +52,8 @@ es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=2)
 
 model.fit(
     train_generator,
-    steps_per_epoch=200,
-    epochs=25,
+    steps_per_epoch=steps_per_epoch,
+    epochs=epochs,
     callbacks=[es],
     validation_data = test_generator)
 
