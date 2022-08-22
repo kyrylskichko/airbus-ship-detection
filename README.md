@@ -7,5 +7,5 @@ Model was trained for part of dataset(~12000 img) because of lack of computation
 
 The implementation of YOLO model was taken from https://www.kaggle.com/code/advaitsave/tensorflow-2-nuclei-segmentation-unet/notebook
 
-#TODO: predict.py
+##TODO: predict.py /n
 I am working on a predict.py, because it takes a lot of time to predict masks for test images because of CPU training.
