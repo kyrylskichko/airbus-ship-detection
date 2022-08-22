@@ -1,6 +1,6 @@
 import tensorflow as tf
 from keras.preprocessing.image import ImageDataGenerator
-from keras.callbacks import EarlyStopping
+from keras.callbacks import ModelCheckpoint
 import keras.losses as losses
 from config import batch_size, IMG_SIZE, epochs, steps_per_epoch
 from model import model
