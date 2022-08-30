@@ -7,7 +7,7 @@ Model was trained for part of dataset(~12000 img) because of lack of computation
 
 The implementation of YOLO model was taken from https://www.kaggle.com/code/advaitsave/tensorflow-2-nuclei-segmentation-unet/notebook
 
-Despite of high accuracy for validation dataset, model showed poor performance on test dataset. The solution is simple: train model longer.
+Despite of high accuracy for validation dataset, model showed poor performance on test dataset.
 
 # TODO: train model better
 
